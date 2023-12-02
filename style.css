@@ -39,8 +39,8 @@ box-shadow: 0 10px 40px 10px rgba(0,0,0);
     font-size: 4rem;
 }
 
-.author{
-    margin: 15px;
+.quote-author{
+    margin-top: 15px;
     font-size: 2rem;
     font-weight: 400;
     font-style: italic;
