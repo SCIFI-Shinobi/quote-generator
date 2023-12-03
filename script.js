@@ -8,9 +8,12 @@ let apiQuotes=[];
 
 function newQuote(){
     const quote=apiQuotes[Math.floor(Math.random() *apiQuotes.length)];
-    quoteText.textContent=quote.text;
-    authorText.textContent=quote.author;
-}
+    // if author field is empty replace it with unknown
+    authorText.textContent = !quote.author? 'unknown' : quote.author ;
+    // changing style of quote based on length of  the quote
+    quote.text.length > 120 ? quoteText.classList.add('long-quote'):quoteText.classList.remove('long-quote');
+    quoteText.textContent = quote.text;
+  }
 
 async function getQuotes(){
   const apiUrl='https://type.fit/api/quotes';
