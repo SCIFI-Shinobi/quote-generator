@@ -9,7 +9,8 @@ let apiQuotes=[];
 function newQuote(){
     const quote=apiQuotes[Math.floor(Math.random() *apiQuotes.length)];
     // if author field is empty replace it with unknown
-    authorText.textContent = !quote.author? 'unknown' : quote.author ;
+    authorText.textContent = quote.author.split(',').length==2 ? 
+    quote.author.split(',')[0]:'unknow' ;
     // changing style of quote based on length of  the quote
     quote.text.length > 120 ? quoteText.classList.add('long-quote'):quoteText.classList.remove('long-quote');
     quoteText.textContent = quote.text;
@@ -25,5 +26,6 @@ async function getQuotes(){
     //catch error here
   }
 }
+
 
 getQuotes();
