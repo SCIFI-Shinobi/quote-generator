@@ -1,8 +1,15 @@
+const quoteContainer=document.getElementById('quote-container');
+const quoteText=document.getElementById('quote');
+const authorText=document.getElementById('author');
+const xBtn=document.getElementById('x-button');
+const newQuoteBtn=document.getElementById('new-quote');
+
 let apiQuotes=[];
 
 function newQuote(){
     const quote=apiQuotes[Math.floor(Math.random() *apiQuotes.length)];
-    console.log(quote);
+    quoteText.textContent=quote.text;
+    authorText.textContent=quote.author;
 }
 
 async function getQuotes(){
