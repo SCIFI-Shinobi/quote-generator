@@ -1,16 +1,18 @@
 @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500&display=swap');
 
 :root {
+    --icon-color:rgba(255, 165, 0, 1);
     --primary-color: rgb(0, 0, 0);
     --on-background: rgb(0, 0, 0);
     --background: rgb(255, 255, 255);
-    --icon-color:rgba(255, 165, 0, 1);
+  
   }
   
   [data-theme="dark"] {
+    --icon-color:rgb(148, 214, 250);
     --primary-color: rgb(150, 65, 255);
     --on-background: rgba(255, 255, 255, 0.9);
-    --icon-color:rgb(148, 214, 250);
+    
     --background: #100010;
   }
 
@@ -143,10 +145,6 @@ button:active{
   color: var(--on-background);
 }
 
-.toggle-icon{
-  color: var(--icon-color);
-}
-
 .theme-switch {
   display: inline-block;
   height: 34px;
@@ -199,4 +197,8 @@ input:checked + .slider::before {
 .fas {
   font-size: 30px;
   margin-right: 5px;
+  
+}
+.fa-sun, .fa-moon{
+  color: var(--icon-color);
 }
